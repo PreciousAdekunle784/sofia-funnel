@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The SKC Method | Sofia Kakkava</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .hidden-offer {
+            display: none;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        @keyframes pulse-gold {
+            0% {
+                box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(234, 179, 8, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(234, 179, 8, 0);
+            }
+        }
+
+        .btn-pulse {
+            animation: pulse-gold 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-stone-50 text-stone-900 font-sans">
+
+    <div class="bg-stone-900 text-white py-3 px-6 flex justify-between items-center sticky top-0 z-50">
+        <div class="font-serif italic text-lg">Sofia Kakkava</div>
+        <div class="text-xs font-semibold uppercase tracking-widest text-stone-400">
+            Phase 2: The SKC Method
+        </div>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-3">
+                How to Build a "Freedom Office"
+            </h1>
+            <p class="text-stone-500">
+                The intersection of Business Strategy & Coaching Psychology.
+            </p>
+        </div>
+
+        <div
+            class="relative w-full aspect-video bg-black rounded shadow-2xl overflow-hidden mb-12 border border-stone-200">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0"
+                title="Sofia Kakkava Training" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div id="skeleton-loader" class="text-center py-8">
+            <p class="text-xs text-stone-400 animate-pulse tracking-widest uppercase">Loading Application Portal...</p>
+        </div>
+
+        <div id="offer-section" class="hidden-offer max-w-2xl mx-auto text-center border-t border-stone-300 pt-10">
+
+            <span class="bg-stone-200 text-stone-600 px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">
+                High-Level Mentorship
+            </span>
+
+            <h2 class="text-3xl font-serif font-bold text-stone-800 mt-6 mb-4">
+                Are you ready to remove the "Revenue Ceiling"?
+            </h2>
+
+            <p class="text-stone-600 mb-8 leading-relaxed">
+                We are selecting established Service Providers for our <strong>Private Mentorship Program</strong>. We
+                will install the Systems, fix the Pricing, and master the Mindset required for a $20k/mo
+                location-independent business.
+            </p>
+
+            <a href="/apply"
+                class="btn-pulse block w-full bg-stone-900 hover:bg-black text-white text-xl font-serif italic py-5 px-6 rounded shadow-xl transition transform hover:-translate-y-1">
+                Apply for Mentorship &raquo;
+            </a>
+
+            <div class="mt-8 flex justify-center gap-4 text-xs text-stone-400 uppercase tracking-widest">
+                <span>Strategy</span> • <span>Structure</span> • <span>Soul</span>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Delay set to 5 seconds for your testing. 
+            // Change to video length for production.
+            setTimeout(function () {
+                document.getElementById('skeleton-loader').style.display = 'none';
+                const offer = document.getElementById('offer-section');
+                offer.style.display = 'block';
+                setTimeout(() => { offer.style.opacity = '1'; }, 50);
+            }, 5000);
+        });
+    </script>
+
+</body>
+
+</html>
